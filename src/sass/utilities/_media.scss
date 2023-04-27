@@ -1,0 +1,10 @@
+@media (min-width: 992px) {
+    .projects{
+        .project{
+            &__boxes{
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+        }
+    }
+}

@@ -1,0 +1,162 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	scroll-padding-top: 80px;
+}
+
+body {
+	font-family: 'Roboto Mono', monospace;
+	background-color: #333;
+	color: #fff;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+// HEADER
+
+.header {
+	&__text {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		margin-top: 80px;
+		text-align: center;
+		&-title {
+			font-size: 4rem;
+			font-style: italic;
+			font-weight: 700;
+		}
+		&-description {
+			padding: 20px 50px;
+			font-size: 2.5rem;
+			font-style: italic;
+			font-weight: 100;
+			&-span {
+				font-weight: 700;
+				color: black;
+			}
+		}
+	}
+}
+
+// PROJECTS
+
+.projects {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	&-heading {
+		margin-top: 50px;
+		font-size: 2.5rem;
+	}
+	.project {
+		&__boxes {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		&__box {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 20px auto;
+			padding: 50px;
+			max-width: 450px;
+			width: 80%;
+			min-height: 450px;
+			background-image: linear-gradient(#3f4b59, #333d46);
+			color: #fff;
+			text-align: center;
+			border: 1px solid #1c232d;
+			border-radius: 15px;
+			box-shadow: 0 0 15px #1c232d;
+			&-title {
+				margin-top: 10px;
+				font-size: 1.5rem;
+			}
+			&-link {
+				color: #fff;
+				text-decoration: none;
+				transition: color 0.3s;
+				&-page {
+					color: rgb(154, 154, 241);
+				}
+				&:hover {
+					color: black;
+				}
+				&-img {
+					width: 100%;
+					max-width: 300px;
+					height: 300px;
+					border-radius: 15px;
+					transition: transform 0.3s;
+					&:hover {
+						transform: scale(0.95);
+					}
+					&-inprogress {
+						position: relative;
+						&-text {
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							font-size: 2rem;
+							transform: translate(-50%, -50%);
+						}
+					}
+				}
+			}
+			&-description {
+				margin-top: 10px;
+				max-width: 300px;
+				font-size: 1.2rem;
+			}
+			&-repo {
+				position: absolute;
+				bottom: 20px;
+				align-self: flex-end;
+				font-size: 1.4rem;
+			}
+		}
+	}
+}
+// GITHUB
+
+.github {
+	position: relative;
+    margin-bottom: 120px;
+	&-text {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		margin-top: 50px;
+		font-size: 4rem;
+        text-align: center;
+		&-link {
+			text-decoration: none;
+			color: rgb(167, 142, 0);
+			transition: color 0.3s;
+            &:hover{
+                color: rgb(197, 169, 11);
+            }
+		}
+	}
+}
+
+@import './utilities/media';
